@@ -20,16 +20,10 @@ const searchTypes = [
 
 function SearchBar() {
   const [searchType, setSearchType] = useState("characters");
-  const [search, setSearch] = useState("");
 
   const handleChangeSearchType = (e) => {
     const searchType = e.target.value;
     setSearchType(searchType);
-  };
-
-  const handleChangeSearch = (e) => {
-    const search = e.target.value;
-    setSearch(search);
   };
 
   const handleSubmit = (e) => {
@@ -58,15 +52,6 @@ function SearchBar() {
         },
       }}
     >
-      <TextField
-        id="outlined-search-bar"
-        variant="outlined"
-        size="large"
-        type="search"
-        label="Search"
-        value={search}
-        onChange={handleChangeSearch}
-      />
       <TextField
         id="outlined-type-selector"
         variant="outlined"

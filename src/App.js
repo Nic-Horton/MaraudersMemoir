@@ -1,14 +1,16 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Characters from './pages/Characters';
 import Spells from './pages/Spells';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import { Box } from '@mui/material';
 
 function App() {
 	return (
-		<div className="App">
+		<Box
+			sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+		>
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
@@ -16,7 +18,7 @@ function App() {
 				<Route path="/spells" element={<Spells />}></Route>
 			</Routes>
 			<Footer />
-		</div>
+		</Box>
 	);
 }
 
