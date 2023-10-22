@@ -1,4 +1,4 @@
-import { getAll } from './fetch_setup';
+import { getAll, getSlug } from './fetch_setup';
 
 //Fetches characters based on search from characters page
 const getCharacters = async (query) => {
@@ -9,4 +9,8 @@ const getCharacters = async (query) => {
 	return await getAll('characters', query);
 };
 
-export { getCharacters };
+const getCharacterSlug = async (slug) => {
+	return await getSlug('characters', slug);
+};
+
+export { getCharacters, getCharacterSlug };

@@ -16,3 +16,8 @@ export const getAll = async (type, query) => {
 	const url = `${apiUrl}/v1/${type}?${pageNumber}&page[size]=20${filter}`;
 	return fetchCall(url);
 };
+
+export const getSlug = async (type, slug) => {
+	const url = `${apiUrl}/v1/${type}/${slug}`;
+	return fetchCall(url);
+};
