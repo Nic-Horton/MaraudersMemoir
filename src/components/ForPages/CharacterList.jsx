@@ -38,7 +38,7 @@ function CharacterList({fetchCharacters}) {
     {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
     ) : (
     <>
-    <Grid container spacing={3} >
+    <Grid container spacing={3} padding={3} alignItems="stretch">
     {data?.pages?.map((page)=>page?.data?.map((character) => {
       return (<CharacterCard key={character.id} character={character} />)
     })
