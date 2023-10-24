@@ -9,7 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 
 function CharacterCard({character}) {
-  const { name, house, image, gender,slug } = character.attributes;
+  const { name, species, image, gender,slug } = character.attributes;
   let imgHolder = '';
 
   if(!gender){
@@ -36,7 +36,10 @@ function CharacterCard({character}) {
             <CardHeader  title={name}/>
             <CardContent >
             <Typography variant="subtitle1" color="text.secondary">
-             {house ? `House: ${house}` : 'House: No affiliation'}
+             {species ? `Species: ${species}` : ''}
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary">
+             {gender ? `Gender: ${gender}` : ''}
             </Typography>
           </CardContent>
         </Card>

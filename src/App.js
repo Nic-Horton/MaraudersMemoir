@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Characters from './pages/Characters';
-import CharacterDetails from './components/ForPages/CharacterDetails';
+import CharacterDetails from './components/ForPages/Characters/CharacterDetails';
 import Spells from './pages/Spells';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
