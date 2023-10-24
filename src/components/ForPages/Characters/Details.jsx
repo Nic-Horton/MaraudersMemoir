@@ -1,5 +1,6 @@
 import React from 'react'
 import DataTable from '../DataTable';
+import AccordionJSX from '../Accordion';
 
 function Details({attributes}){
 
@@ -68,11 +69,36 @@ function Details({attributes}){
         value: boggart,
       },
     ];
+
+    const accordionInfo = [
+      {
+        name: "Alias Names",
+        value: alias_names,
+      },
+      {
+        name: "Wands",
+        value: wands,
+      },
+      {
+        name: "Jobs",
+        value: jobs,
+      },
+      {
+        name: "Romances",
+        value: romances,
+      },
+      {
+        name: "Family Members",
+        value: family_members,
+      },
+    ];
   
   return(
     <>
       <img src={image} alt={name} />
       <DataTable tableInfo={tableInfo}/>
+      <AccordionJSX accordionInfo={accordionInfo}/>
+      <a href={wiki}>Wiki</a>
     </>
   )
 }

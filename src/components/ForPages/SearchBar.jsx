@@ -2,15 +2,12 @@ import React from 'react'
 import { Search } from "@mui/icons-material";
 import { Box, Button, MenuItem, TextField } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const searchTypes = [
   {
     value: "characters",
     label: "Characters",
-  },
-  {
-    value: "potions",
-    label: "Potions",
   },
   {
     value: "spells",
@@ -19,6 +16,7 @@ const searchTypes = [
 ];
 
 function SearchBar() {
+  const navigate = useNavigate();
   const [searchType, setSearchType] = useState("characters");
 
   const handleChangeSearchType = (e) => {
@@ -28,6 +26,7 @@ function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate(`/${searchType}`)
   };
 
   return (
