@@ -1,13 +1,14 @@
 import React from 'react'
 import DataTable from '../DataTable';
 import AccordionJSX from '../Accordion';
+import { Box, Grid, CardMedia, Button } from '@mui/material';
 
 function Details({attributes}){
 
   const {
     name, image, alias_names, blood_status, born, died, 
     house, patronus, animagus, boggart, wands,
-    eye_color, hair_color, gender, species, skin_color,
+    eye_color, hair_color, gender, species,
     nationality, family_members, jobs, romances, wiki,
   } = attributes;
 
@@ -53,10 +54,6 @@ function Details({attributes}){
         value: eye_color,
       },
       {
-        name: "Skin color",
-        value: skin_color,
-      },
-      {
         name: "Nationality",
         value: nationality,
       },
@@ -92,13 +89,37 @@ function Details({attributes}){
         value: family_members,
       },
     ];
+
+    let imgHolder = '';
+
+    if(!gender){
+      imgHolder = "/images/Wizard.png"
+    } else {
+      if(gender === 'Male'){
+        imgHolder="/images/WizardM.png"
+      } else {
+        imgHolder = "/images/WizardF.png"
+      }
+    }
   
   return(
     <>
-      <img src={image} alt={name} />
-      <DataTable tableInfo={tableInfo}/>
-      <AccordionJSX accordionInfo={accordionInfo}/>
-      <a href={wiki}>Wiki</a>
+        <CardMedia
+          component='img'
+          image={image ? image : imgHolder}
+          alt={name}
+          height={'300'}
+          sx={{objectFit:'contain', mt:3}}
+        />
+        <Grid container spacing={3} display='flex' padding={5} justifyContent='space-evenly'>
+          <Grid item xs={12} md={4}>
+            <DataTable tableInfo={tableInfo}/>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <AccordionJSX accordionInfo={accordionInfo}/>
+          </Grid>
+        </Grid>
+        <Button component={'a'} href={wiki} variant='contained'>Wiki</Button>
     </>
   )
 }
