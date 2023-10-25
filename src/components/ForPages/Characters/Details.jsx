@@ -1,7 +1,7 @@
 import React from 'react'
 import DataTable from '../DataTable';
 import AccordionJSX from '../Accordion';
-import { Box, Grid, CardMedia, Button } from '@mui/material';
+import { Grid, CardMedia, Button, Box } from '@mui/material';
 
 function Details({attributes}){
 
@@ -103,15 +103,17 @@ function Details({attributes}){
     }
   
   return(
-    <>
+    <>  
+        <Box sx={{mt:3, mb:3, border:'3mm ridge orange'}}>
         <CardMedia
           component='img'
           image={image ? image : imgHolder}
           alt={name}
           height={'300'}
-          sx={{objectFit:'contain', mt:3}}
+          sx={{objectFit:'fill'}}
         />
-        <Grid container spacing={3} display='flex' padding={5} justifyContent='space-evenly'>
+        </Box>
+        <Grid container spacing={3} display='flex' pl={5} pr={5} justifyContent='space-evenly'>
           <Grid item xs={12} md={4}>
             <DataTable tableInfo={tableInfo}/>
           </Grid>
