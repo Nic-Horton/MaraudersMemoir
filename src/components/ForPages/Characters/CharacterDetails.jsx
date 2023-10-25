@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query'
 import { getCharacterSlug } from '../../Data/fetch_characters';
 import Details from './Details';
 import { useParams } from 'react-router-dom';
-import { Typography } from '@mui/material';
 
 
 const fetchCharacter = async ( { queryKey } ) => {
