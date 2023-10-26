@@ -15,7 +15,7 @@ function Characters() {
   
   return (
     <>
-    <Box gap={2} sx={{mt:3,display:'flex',alignItems:'center',justifyContent:'stretch', flexDirection:'column'}}>
+    <Box width={'80%'} gap={2} sx={{mt:3,display:'flex',alignItems:'center',justifyContent:'stretch', flexDirection:'column'}}>
     <CharacterList  fetchCharacters={fetchCharacters}/>
     </Box>
     </>
