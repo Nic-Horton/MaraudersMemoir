@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Characters from './pages/Characters';
 import CharacterDetails from './components/ForPages/Characters/CharacterDetails';
 import Spells from './pages/Spells';
+import SpellDetails from './components/ForPages/Spells/SpellDetails';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { Box } from '@mui/material';
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/characters" element={<Characters />}></Route>
 				<Route path="/characters/:slug" element={<CharacterDetails />}></Route>
 				<Route path="/spells" element={<Spells />}></Route>
+				<Route path="/spells/:slug" element={<SpellDetails />}></Route>
 			</Routes>
 			<Footer />
 		</Box>
