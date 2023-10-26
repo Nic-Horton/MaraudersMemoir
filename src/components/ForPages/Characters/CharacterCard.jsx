@@ -9,7 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 
 function CharacterCard({character}) {
-  const { name, species, image, gender,slug } = character.attributes;
+  const { name, species, image, gender,slug, house } = character.attributes;
   let imgHolder = '';
 
   if(!gender){
@@ -22,13 +22,33 @@ function CharacterCard({character}) {
     }
   }
 
+  let houseColor = '';
+
+  switch(house){
+    case 'Gryffindor':
+      houseColor = '#ae0001'
+      break;
+      case 'Ravenclaw':
+        houseColor = '#222f5b'
+        break;
+      case 'Slytherin':
+        houseColor = '#2a623d'
+        break;
+      case 'Hufflepuff':
+        houseColor = '#ecb939'
+        break
+    default:
+      houseColor = '#bebebe'
+  }
+
   return (
     <Grid display={'flex'} item xs={12} sm={6} md={4} lg={3}>
       <CardActionArea component={Link} to={`/characters/${slug}`}>
-        <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between', height:'100%', borderRadius:'10px'}}>
+        <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between', 
+          height:'100%', borderRadius:'10px', border:`.25rem solid ${houseColor}`}}>
             <CardMedia
-            height={'300'}
-            sx={{objectFit:'contain'}}
+            height={'280'}
+            sx={{objectFit:'contain', borderBottom:`.25rem solid ${houseColor}`}}
             component="img"
             image={image ? image : imgHolder}
             alt={image ? `Picture of ${name}` : ""}

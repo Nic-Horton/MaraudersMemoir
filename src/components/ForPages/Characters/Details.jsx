@@ -101,16 +101,35 @@ function Details({attributes}){
         imgHolder = "/images/WizardF.png"
       }
     }
+
+    let houseColor = '';
+
+    switch(house){
+      case 'Gryffindor':
+        houseColor = '#ae0001'
+        break;
+        case 'Ravenclaw':
+          houseColor = '#222f5b'
+          break;
+        case 'Slytherin':
+          houseColor = '#2a623d'
+          break;
+        case 'Hufflepuff':
+          houseColor = '#ecb939'
+          break
+      default:
+        houseColor = '#bebebe'
+    }
   
   return(
     <>  
-        <Box sx={{mt:3, mb:3, border:'3mm ridge orange'}}>
+        <Box sx={{mt:3, mb:3, border:`1rem ridge ${houseColor}`, borderRadius:'25px'}}>
         <CardMedia
           component='img'
           image={image ? image : imgHolder}
           alt={name}
           height={'300'}
-          sx={{objectFit:'fill'}}
+          sx={{objectFit:'fill', borderRadius:'10px'}}
         />
         </Box>
         <Grid container spacing={3} display='flex' pl={5} pr={5} justifyContent='space-evenly'>

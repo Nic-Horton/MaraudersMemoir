@@ -17,7 +17,13 @@ const searchTypes = [
 
 function SearchBar() {
   const navigate = useNavigate();
+  const [homeSearch, setHomeSearch] = useState('');
   const [searchType, setSearchType] = useState("characters");
+
+  const handleChangeSearch = (event) => {
+    const search = event.target.value;
+    setHomeSearch(search);
+  };
 
   const handleChangeSearchType = (e) => {
     const searchType = e.target.value;
@@ -26,7 +32,7 @@ function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/${searchType}`)
+    navigate(`/${searchType}?q=${encodeURIComponent(homeSearch)}`)
   };
 
   return (
@@ -51,6 +57,14 @@ function SearchBar() {
         },
       }}
     >
+      <TextField
+        id="outlined-type-selector"
+        variant="outlined"
+        type='search'
+        label="search"
+        value={homeSearch}
+        onChange={handleChangeSearch}
+      />
       <TextField
         id="outlined-type-selector"
         variant="outlined"

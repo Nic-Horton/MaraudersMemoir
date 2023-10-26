@@ -27,9 +27,9 @@ function AccordionJSX({accordionInfo}) {
           {accordion.name}
         </AccordionSummary>
         <AccordionDetails>
-          {accordion.value.map((info)=>{
+          {accordion.value.map((info, index)=>{
             return(
-              <List dense>
+              <List key={`key-${index}`} dense>
                 <ListItem>
                   <ListItemIcon>
                     <ElectricBoltIcon />
