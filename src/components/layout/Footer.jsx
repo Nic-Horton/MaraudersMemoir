@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
       {'Copyright © '}
       <Link component={NavLink} color="inherit" to={'/'}>
-        PotterMate
+        MaraudersMemoir
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
