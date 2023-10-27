@@ -44,7 +44,7 @@ function SpellList({fetchSpells}) {
 
   return (
     <>
-    <TextField id="outlined-basic" label="Outlined" variant="outlined" 
+    <TextField id="outlined-basic" label="Search" variant="outlined" 
     value={search?search:''} 
     onChange={handleChange}/>
     {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
