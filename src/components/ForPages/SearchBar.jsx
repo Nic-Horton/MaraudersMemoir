@@ -71,10 +71,10 @@ function SearchBar() {
             borderColor: (theme) => theme.palette.secondary.main.dark
           },
             '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active': {
-              '-webkit-background-clip': 'text',
-              '-webkit-text-fill-color': (theme) => theme.palette.secondary.main,
+              'WebkitBackgroundClip': 'text',
+              'WebkitTextFillColor': (theme) => theme.palette.secondary.main,
               'transition': 'background-color 5000s ease-in-out 0s',
-              'box-shadow': 'inset 0 0 20px 20px #23232329',
+              'boxShadow': 'inset 0 0 20px 20px #23232329',
             },
         }}
         InputLabelProps={{

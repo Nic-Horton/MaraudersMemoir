@@ -48,10 +48,10 @@ function SpellList({fetchSpells}) {
     value={search?search:''} 
     onChange={handleChange}
     sx={{'& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active': {
-      '-webkit-background-clip': 'text',
-      '-webkit-text-fill-color': (theme) => theme.palette.primary.main,
+      'WebkitBackgroundClip': 'text',
+      'WebkitTextFillColor': (theme) => theme.palette.primary.main,
       'transition': 'background-color 5000s ease-in-out 0s',
-      'box-shadow': 'inset 0 0 20px 20px #23232329',
+      'boxShadow': 'inset 0 0 20px 20px #23232329',
     },}}
     />
     {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
