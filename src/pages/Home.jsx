@@ -7,6 +7,7 @@ function Home() {
   return (
     <>
     <Box sx={{
+      mt:1,
         height:'75vh',
         width:'100%',
         backgroundImage:"url(/images/homeBG.PNG)",
