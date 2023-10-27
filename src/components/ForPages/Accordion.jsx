@@ -32,7 +32,7 @@ function AccordionJSX({accordionInfo}) {
               <List key={`key-${index}`} dense>
                 <ListItem>
                   <ListItemIcon>
-                    <ElectricBoltIcon />
+                    <ElectricBoltIcon sx={{color:'gold'}} />
                   </ListItemIcon>
                   <ListItemText
                     primary={info}

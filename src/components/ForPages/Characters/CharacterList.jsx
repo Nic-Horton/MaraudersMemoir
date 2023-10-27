@@ -44,7 +44,7 @@ function CharacterList({fetchCharacters}) {
 
   return (
     <>
-      <TextField id="back-to-top-anchor" label="Search" variant="outlined"
+      <TextField id="back-to-top-anchor" label="Search" type='search' variant="outlined"
       value={search?search:''} onChange={handleChange}
       sx={{
         '& fieldset': {
