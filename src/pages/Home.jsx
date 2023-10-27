@@ -18,15 +18,16 @@ function Home() {
         flexDirection:'column',
         justifyContent:'space-between'
     }}>
-    <Typography component='h1' variant={'h3'} sx={{
+    <Typography component='h1' sx={{
       textAlign:'center',
+      fontSize:{xs:'2.5rem', sm:'3rem'},
       fontFamily:'Lugrasimo',
       color:'#740001',
-      mt:{xs:15, xl:7}
+      mt:{xs:10, sm:10, lg:8, xl:7}
     }}>
       Marauder's <br/> Memoir
     </Typography>
-    <Box mb={{md:18, xs:10}}>
+    <Box mb={{md:18, xs:5}}>
     <SearchBar/>
     </Box>
     </Box>
