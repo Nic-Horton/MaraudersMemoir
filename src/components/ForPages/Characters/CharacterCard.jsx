@@ -59,10 +59,10 @@ function CharacterCard({character}) {
             />
             <CardHeader  title={name}/>
             <CardContent >
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="subtitle1" color="text.primary">
              {species ? `Species: ${species}` : ''}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="subtitle1" color="text.primary">
              {gender ? `Gender: ${gender}` : ''}
             </Typography>
           </CardContent>

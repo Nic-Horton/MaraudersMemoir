@@ -125,6 +125,7 @@ function Details({attributes}){
     <>  
         <Box sx={{mt:3, mb:3}}>
         <CardMedia
+          id="back-to-top-anchor"
           component='img'
           image={image ? image : imgHolder}
           alt={name}
@@ -132,7 +133,7 @@ function Details({attributes}){
           sx={{objectFit:'contain', borderRadius:'10px',border:`.7rem ridge ${houseColor}`}}
         />
         </Box>
-        <Grid container spacing={3} display='flex' pl={5} pr={5} justifyContent='space-evenly'>
+        <Grid container spacing={5} display='flex' pl={5} pr={5} justifyContent='center'>
           <Grid item xs={12} md={4}>
             <DataTable tableInfo={tableInfo}/>
           </Grid>

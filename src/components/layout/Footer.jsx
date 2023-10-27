@@ -7,7 +7,7 @@ import { Link } from '@mui/material';
 
 function Copyright() {
   return (
-    <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
+    <Typography variant="subtitle1" align="center" color="text.primary" component="p">
       {'Copyright © '}
       <Link component={NavLink} color="inherit" to={'/'}>
         MaraudersMemoir
@@ -20,7 +20,7 @@ function Copyright() {
 
 function Footer() {
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+    <Box component="footer" sx={{ py: 6 }}>
       <Container maxWidth="lg">
         <Copyright />
       </Container>

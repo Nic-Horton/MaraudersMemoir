@@ -13,6 +13,30 @@ import CssBaseline from '@mui/material/CssBaseline';
 const darkTheme = createTheme({
 	palette: {
 		mode: 'dark',
+		primary: {
+			main: '#f3cdaa',
+		},
+		secondary: {
+			main: '#740001',
+		},
+		background: {
+			paper: '#370101',
+		},
+		text: {
+			primary: '#e0ae83',
+			secondary: '#900505',
+		},
+	},
+	components: {
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: {
+					'&:hover .MuiOutlinedInput-notchedOutline': {
+						borderColor: '#B30202',
+					},
+				},
+			},
+		},
 	},
 });
 

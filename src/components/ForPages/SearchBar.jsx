@@ -59,29 +59,62 @@ function SearchBar() {
         id="outlined-type-selector"
         variant="outlined"
         type='search'
+        color="secondary"
         label="Search"
         value={homeSearch}
         onChange={handleChangeSearch}
+        sx={{
+          '& fieldset': {
+            borderColor: (theme) => theme.palette.secondary.main
+          },
+          '&:hover fieldset': {
+            borderColor: (theme) => theme.palette.secondary.main.dark
+          },
+            '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active': {
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': (theme) => theme.palette.secondary.main,
+              'transition': 'background-color 5000s ease-in-out 0s',
+              'box-shadow': 'inset 0 0 20px 20px #23232329',
+            },
+        }}
         InputLabelProps={{
           sx: {
             fontFamily:'Lugrasimo',
           },}}
+          InputProps={{
+            sx: {
+              color:'secondary.dark',
+              fontFamily:'Lugrasimo'
+            },}}
       />
+      
       <TextField
         id="outlined-type-selector"
         variant="outlined"
+        color="secondary"
         select
         label="Type"
         value={searchType}
         onChange={handleChangeSearchType}
+        sx={{
+          '& .MuiSelect-select': {
+            fontFamily: 'Lugrasimo',
+          },
+          '& fieldset': {
+            borderColor: (theme) => theme.palette.secondary.main
+          },
+          '& .MuiSelect-icon': {
+            color: 'secondary.main'
+         }
+        }}
         InputLabelProps={{
           sx: {
             fontFamily:'Lugrasimo',
           },}}
-        sx={{
-          '& .MuiSelect-select': {
-              fontFamily: 'Lugrasimo',
-        },}}
+        InputProps={{
+          sx: {
+            color:'secondary.main'
+          },}}
       >
         {searchTypes.map((type) => (
           <MenuItem key={type.value} value={type.value} sx={{fontFamily:'Lugrasimo'}}>
@@ -93,15 +126,24 @@ function SearchBar() {
         size="large"
         type="submit"
         onClick={handleSubmit}
-        variant="outlined"
+        variant="contained"
         aria-label="search"
-        startIcon={<Search />}
-        sx={{fontFamily:'Lugrasimo'}}
+        color="secondary"
       >
-        Search
+        {<Search color='primary'/>}
       </Button>
     </Box>
   )
 }
 
 export default SearchBar
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover, 
+// input:-webkit-autofill:focus, 
+// input:-webkit-autofill:active{
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: #ffffff;
+//     transition: background-color 5000s ease-in-out 0s;
+//     box-shadow: inset 0 0 20px 20px #23232329;
+// }

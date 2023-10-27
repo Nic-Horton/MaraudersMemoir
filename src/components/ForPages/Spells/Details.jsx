@@ -45,7 +45,7 @@ function Details({attributes}){
           image={image ? image : imgHolder}
           alt={name}
           height={'225'}
-          sx={{objectFit:'contain',border:'.5rem double orange'}}
+          sx={{objectFit:'contain',border:'.5rem double', borderColor:light ? light:'primary'}}
         />
         </Box>
         <Grid container spacing={3} display='flex' pl={5} pr={5} mb={2} justifyContent='space-evenly'>

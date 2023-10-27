@@ -20,7 +20,7 @@ function SpellCard({spell}) {
     <Grid display={'flex'} item xs={12} sm={6} md={4} lg={3}>
       <CardActionArea component={Link} to={`/spells/${slug}`} sx={{borderRadius:'10px'}}>
         <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between',
-           height:'100%', borderRadius:'10px', border:'.25rem solid #bebebe'}}>
+           height:'100%', borderRadius:'10px', border:'.25rem solid #bebebe',}}>
             <CardMedia
             height={'225'}
             sx={{objectFit:'contain', 
@@ -34,7 +34,7 @@ function SpellCard({spell}) {
             />
             <CardHeader  title={name}/>
             <CardContent >
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="subtitle1" color="text.primary">
              {category ? `Category: ${category}` : ''}
             </Typography>
           </CardContent>

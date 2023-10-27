@@ -46,7 +46,7 @@ function Characters() {
         }}
       />
       <ScrollTop>
-        <Fab size="small" aria-label="scroll back to top">
+        <Fab size="medium" aria-label="scroll-to-top" color="secondary">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

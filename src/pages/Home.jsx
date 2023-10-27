@@ -2,25 +2,11 @@ import React from 'react'
 import SearchBar from '../components/ForPages/SearchBar'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main:'#740001',
-    },
-    secondary: {
-      main:'#EFEBE9',
-    }
-  },
-});
 
 function Home() {
   return (
     <>
-    <ThemeProvider theme={theme}>
     <Box sx={{
-        
         height:'75vh',
         width:'100%',
         backgroundImage:"url(/images/homeBG.PNG)",
@@ -35,16 +21,15 @@ function Home() {
       textAlign:'center',
       fontSize:{xs:'2.5rem', sm:'3rem'},
       fontFamily:'Lugrasimo',
-      color:'#740001',
+      color:'secondary.main',
       mt:{xs:10, sm:10, lg:8, xl:7}
     }}>
       Marauder's <br/> Memoir
     </Typography>
-    <Box mb={{md:18, xs:5}}>
+    <Box mb={{lg:18,md:20, xs:5}}>
     <SearchBar/>
     </Box>
     </Box>
-    </ThemeProvider>
     </>
   )
 }
