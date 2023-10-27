@@ -28,8 +28,8 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-      MaraudersMemoir
+      <Typography variant="h6" sx={{ my: 2, fontFamily:'Lugrasimo'}}>
+      Marauder,s Memoir
       </Typography>
       <Divider />
       <List>
@@ -63,9 +63,9 @@ function Navbar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', textAlign:'left'}}}
+            sx={{fontFamily:'Lugrasimo', flexGrow: 1, display: { xs: 'none', sm: 'block', textAlign:'left'}}}
           >
-            MaraudersMemoir
+            Marauder's Memoir
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

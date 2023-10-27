@@ -41,11 +41,9 @@ function SearchBar() {
       sx={{
         display: "flex",
         gap: 1,
-        mt: 5,
         justifyContent: "center",
         width: {
           xs: "100%",
-          sm: "70%",
         },
         flexDirection: {
           xs: "column",
@@ -61,7 +59,7 @@ function SearchBar() {
         id="outlined-type-selector"
         variant="outlined"
         type='search'
-        label="search"
+        label="Search"
         value={homeSearch}
         onChange={handleChangeSearch}
       />
