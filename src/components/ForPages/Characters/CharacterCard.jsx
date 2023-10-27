@@ -47,8 +47,8 @@ function CharacterCard({character}) {
         <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between', 
           height:'100%', borderRadius:'10px', border:`.25rem solid ${houseColor}`}}>
             <CardMedia
-            height={'300'}
-            sx={{objectFit:'scale-down', 
+            height={'225'}
+            sx={{objectFit:'contain', 
             pt:{xs:2, md:1, xl:4},
             pr:{xs:3, md:2}, 
             pl:{xs:3, md:2},

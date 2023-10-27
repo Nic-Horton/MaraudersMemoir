@@ -123,13 +123,13 @@ function Details({attributes}){
   
   return(
     <>  
-        <Box sx={{mt:3, mb:3, border:`1rem ridge ${houseColor}`, borderRadius:'25px'}}>
+        <Box sx={{mt:3, mb:3}}>
         <CardMedia
           component='img'
           image={image ? image : imgHolder}
           alt={name}
-          height={'300'}
-          sx={{objectFit:'fill', borderRadius:'10px'}}
+          height={'250'}
+          sx={{objectFit:'contain', borderRadius:'10px',border:`.7rem ridge ${houseColor}`}}
         />
         </Box>
         <Grid container spacing={3} display='flex' pl={5} pr={5} justifyContent='space-evenly'>
@@ -140,6 +140,7 @@ function Details({attributes}){
             <AccordionJSX accordionInfo={accordionInfo}/>
           </Grid>
         </Grid>
+        <br />
         <Button component={'a'} href={wiki} variant='contained'>Wiki</Button>
     </>
   )

@@ -22,8 +22,7 @@ function SpellCard({spell}) {
         <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between',
            height:'100%', borderRadius:'10px', border:'.25rem solid #bebebe'}}>
             <CardMedia
-            height={'200'}
-            // sx={{objectFit:'contain'}}
+            height={'225'}
             sx={{objectFit:'contain', 
             pt:{xs:2, md:2, xl:4},
             pr:{xs:3, md:2}, 

@@ -53,6 +53,7 @@ function Details({attributes}){
             <DataTable tableInfo={tableInfo}/>
           </Grid>
         </Grid>
+        <br />
         <Button component={'a'} href={wiki} variant='contained'>Wiki</Button>
     </>
   )
