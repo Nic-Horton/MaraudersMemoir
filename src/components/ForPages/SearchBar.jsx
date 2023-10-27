@@ -67,9 +67,6 @@ function SearchBar() {
           '& fieldset': {
             borderColor: (theme) => theme.palette.secondary.main
           },
-          '&:hover fieldset': {
-            borderColor: (theme) => theme.palette.secondary.main.dark
-          },
             '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active': {
               'WebkitBackgroundClip': 'text',
               'WebkitTextFillColor': (theme) => theme.palette.secondary.main,
@@ -137,13 +134,3 @@ function SearchBar() {
 }
 
 export default SearchBar
-
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover, 
-// input:-webkit-autofill:focus, 
-// input:-webkit-autofill:active{
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: #ffffff;
-//     transition: background-color 5000s ease-in-out 0s;
-//     box-shadow: inset 0 0 20px 20px #23232329;
-// }
