@@ -62,6 +62,10 @@ function SearchBar() {
         label="Search"
         value={homeSearch}
         onChange={handleChangeSearch}
+        InputLabelProps={{
+          sx: {
+            fontFamily:'Lugrasimo',
+          },}}
       />
       <TextField
         id="outlined-type-selector"
@@ -70,9 +74,17 @@ function SearchBar() {
         label="Type"
         value={searchType}
         onChange={handleChangeSearchType}
+        InputLabelProps={{
+          sx: {
+            fontFamily:'Lugrasimo',
+          },}}
+        sx={{
+          '& .MuiSelect-select': {
+              fontFamily: 'Lugrasimo',
+        },}}
       >
         {searchTypes.map((type) => (
-          <MenuItem key={type.value} value={type.value}>
+          <MenuItem key={type.value} value={type.value} sx={{fontFamily:'Lugrasimo'}}>
             {type.label}
           </MenuItem>
         ))}
@@ -84,6 +96,7 @@ function SearchBar() {
         variant="outlined"
         aria-label="search"
         startIcon={<Search />}
+        sx={{fontFamily:'Lugrasimo'}}
       >
         Search
       </Button>

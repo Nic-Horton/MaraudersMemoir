@@ -2,10 +2,23 @@ import React from 'react'
 import SearchBar from '../components/ForPages/SearchBar'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main:'#740001',
+    },
+    secondary: {
+      main:'#EFEBE9',
+    }
+  },
+});
 
 function Home() {
   return (
     <>
+    <ThemeProvider theme={theme}>
     <Box sx={{
         
         height:'75vh',
@@ -31,6 +44,7 @@ function Home() {
     <SearchBar/>
     </Box>
     </Box>
+    </ThemeProvider>
     </>
   )
 }
