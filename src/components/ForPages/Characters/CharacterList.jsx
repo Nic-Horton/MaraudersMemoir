@@ -44,26 +44,25 @@ function CharacterList({fetchCharacters}) {
 
   return (
     <>
-    <TextField id="outlined-basic" label="Search" variant="outlined" 
-    value={search?search:''} onChange={handleChange}/>
-    {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
-    ) : (
-    <>
-    <Grid container spacing={3} padding={3} alignItems="stretch">
-    {data?.pages?.map((page)=>page?.data?.map((character) => {
-      return (<CharacterCard key={character.id} character={character} />)
-    })
-    )
-    }
-    </Grid>
-    {hasNextPage && (
-      <Button variant='contained' onClick={()=>fetchNextPage()}>
-        {isFetchingNextPage ? "Loading..." : "Load More"}
-      </Button>
-    )}
-    </>
-    )
-    }
+      <TextField id="back-to-top-anchor" label="Search" variant="outlined" 
+      value={search?search:''} onChange={handleChange}/>
+      {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
+      ) : (
+        <>
+          <Grid container spacing={3} padding={3} alignItems="stretch">
+          {data?.pages?.map((page)=>page?.data?.map((character) => {
+            return (<CharacterCard key={character.id} character={character} />)
+          })
+          )
+          }
+          </Grid>
+          {hasNextPage && (
+            <Button variant='contained' onClick={()=>fetchNextPage()}>
+              {isFetchingNextPage ? "Loading..." : "Load More"}
+            </Button>
+          )}
+        </>
+      )}
     </>
   )
 

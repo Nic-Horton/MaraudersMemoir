@@ -1,6 +1,9 @@
 import { getCharacters } from "../components/Data/fetch_characters";
 import CharacterList from "../components/ForPages/Characters/CharacterList";
 import { Box, Paper } from "@mui/material";
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ScrollTop from "../components/ForPages/ScrollTop";
 
 //fetch call that will be passed to create the character list. Takes into account the page and searched name.
 const fetchCharacters = async ( { pageParam = 1, queryKey } ) => {
@@ -42,6 +45,11 @@ function Characters() {
           backgroundSize: 'cover',
         }}
       />
+      <ScrollTop>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </>
   )
 }
