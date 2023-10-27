@@ -18,11 +18,17 @@ function SpellCard({spell}) {
 
   return (
     <Grid display={'flex'} item xs={12} sm={6} md={4} lg={3}>
-      <CardActionArea component={Link} to={`/spells/${slug}`}>
-        <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between', height:'100%', borderRadius:'10px'}}>
+      <CardActionArea component={Link} to={`/spells/${slug}`} sx={{borderRadius:'10px'}}>
+        <Card sx={{ display: 'flex', flexDirection:'column', justifyContent:'space-between',
+           height:'100%', borderRadius:'10px', border:'.25rem solid #bebebe'}}>
             <CardMedia
-            height={'300'}
-            sx={{objectFit:'contain'}}
+            height={'200'}
+            // sx={{objectFit:'contain'}}
+            sx={{objectFit:'contain', 
+            pt:{xs:2, md:2, xl:4},
+            pr:{xs:3, md:2}, 
+            pl:{xs:3, md:2},
+          }}
             component="img"
             image={image ? image : imgHolder}
             alt={image ? `Picture of ${name}` : ""}

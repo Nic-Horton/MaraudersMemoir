@@ -44,7 +44,7 @@ function Details({attributes}){
           component='img'
           image={image ? image : imgHolder}
           alt={name}
-          height={'300'}
+          height={'225'}
           sx={{objectFit:'contain',border:'.5rem double orange'}}
         />
         </Box>
