@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { TextField,Grid,Button, Typography } from "@mui/material";
+import { TextField,Grid,Button, Typography,Box } from "@mui/material";
 import { useInfiniteQuery } from '@tanstack/react-query';
 import CharacterCard from './CharacterCard';
 import { useLocation } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function CharacterList({fetchCharacters}) {
   //gets query parameter in the URL
@@ -67,7 +68,11 @@ function CharacterList({fetchCharacters}) {
             fontFamily:'Lugrasimo'
           },}}
       />
-      {status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
+      {status ==='pending'? 
+      <Box sx={{ display: 'flex', mt:5 }}>
+        <CircularProgress />
+      </Box>
+      : status === 'error' ? (<Typography variant='h2'>Error: {error.message}</Typography>
       ) : (
         <>
           <Grid container spacing={3} padding={3} alignItems="stretch">

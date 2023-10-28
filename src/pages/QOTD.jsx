@@ -3,11 +3,14 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function QOTD() {
   const [quote, setQuote] = useState({ text: '', speaker: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const currentDate = new Date();
     const today = currentDate.toDateString();
     const qod = localStorage.getItem('quote');
@@ -15,6 +18,7 @@ function QOTD() {
 
     if (qod && lastUpdateDate === today) {
       setQuote(JSON.parse(qod));
+      setIsLoading(false);
     } else {
       fetch('https://api.portkey.uk/quote')
       .then((res)=> res.json())
@@ -24,13 +28,21 @@ function QOTD() {
         setQuote(newQuote)
         localStorage.setItem('quote', JSON.stringify(newQuote))
         localStorage.setItem('lastUpdateDate', today);
+        setIsLoading(false);
       })
     }
   }, []);
 
   return (
       <Card sx={{ mt:6, mx:2 ,minWidth: 250, maxWidth:600}}>
-      <CardContent>
+      {isLoading ? 
+        <CardContent>
+        <Box sx={{ display: 'flex', justifyContent:'center' }}>
+          <CircularProgress />
+        </Box>
+        </CardContent>
+        : 
+        <CardContent>
         <Typography sx={{ fontSize: 14,fontFamily:'Lugrasimo' }} color="primary.dark" gutterBottom>
           Quote of the Day
         </Typography>
@@ -42,7 +54,9 @@ function QOTD() {
         -{quote.speaker}
         </Typography>
         </Box>
-      </CardContent>
+        </CardContent>
+      }
+      
     </Card>
   );
 }
