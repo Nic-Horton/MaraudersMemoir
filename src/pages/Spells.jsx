@@ -26,7 +26,7 @@ function Spells() {
           left: 0,
           height: '100vh', 
           width: '10%', 
-          backgroundImage:"url(/images/prints2.PNG)",
+          backgroundImage:"url(./images/prints2.png)",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -41,7 +41,7 @@ function Spells() {
           right: 0,
           height: '100vh', 
           width: '10%',
-          backgroundImage:"url(/images/prints2.PNG)",
+          backgroundImage:"url(./images/prints2.png)",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
