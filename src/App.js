@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer';
 import Box from '@mui/material/Box';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import QOTD from './pages/QOTD';
 
 const darkTheme = createTheme({
 	palette: {
@@ -57,6 +58,7 @@ function App() {
 					></Route>
 					<Route path="/spells" element={<Spells />}></Route>
 					<Route path="/spells/:slug" element={<SpellDetails />}></Route>
+					<Route path="/qotd" element={<QOTD />}></Route>
 				</Routes>
 				<Footer />
 			</Box>

@@ -16,7 +16,11 @@ import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = [{name: 'Home', path: '/' },{name: 'Characters', path: '/characters' },{name: 'Spells', path: '/spells' }];
+const navItems = [
+  {name: 'Home', path: '/' },
+  {name: 'Characters', path: '/characters' },
+  {name: 'Spells', path: '/spells' },
+  {name: 'QOTD', path: '/qotd'}];
 
 function Navbar(props) {
   const { window } = props;
