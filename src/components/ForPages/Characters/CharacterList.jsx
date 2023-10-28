@@ -78,7 +78,7 @@ function CharacterList({fetchCharacters}) {
           }
           </Grid>
           {hasNextPage && (
-            <Button variant='contained' onClick={()=>fetchNextPage()}>
+            <Button variant='contained' color='primary' onClick={()=>fetchNextPage()}>
               {isFetchingNextPage ? "Loading..." : "Load More"}
             </Button>
           )}

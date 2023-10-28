@@ -25,7 +25,7 @@ function Characters() {
           left: 0,
           height: '100vh', 
           width: '10%',
-          backgroundImage:"url(/images/prints1.PNG)",
+          backgroundImage:"url(./images/prints1.png)",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -40,7 +40,7 @@ function Characters() {
           right: 0,
           height: '100vh', 
           width: '10%',
-          backgroundImage:"url(/images/prints1.PNG)",
+          backgroundImage:"url(./images/prints1.png)",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
